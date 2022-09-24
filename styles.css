@@ -7,17 +7,22 @@ body {
   padding: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
-  background: url('./bg.jpg') repeat center center fixed;
+  background-color: #151b3c;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  user-select: none;
 }
 
 h1 {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 20px;
   border-radius: 15px;
   border: 4px solid transparent;
   backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #bdffff;
+  background-color: rgba(245, 245, 245, 0.15);
 }
 
 .name {
@@ -27,6 +32,7 @@ h1 {
 #background {
   width: 100%;
   height: 100vh;
+  /* filter: blur(1px); */
 }
 
 .links {
@@ -35,111 +41,59 @@ h1 {
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: center; */
   align-items: center;
+  text-align: center;
   z-index: 1;
 }
 
 .link {
+  width: 100%;
   padding-top: 20px;
 }
 
 .button-pushable {
   position: relative;
-  border: none;
-  background: transparent;
+  /* border: none; */
   padding: 0;
-  cursor: pointer;
+  /* cursor: pointer;
   outline-offset: 4px;
   transition: filter 250ms;
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 200px;
-}
-
-.button-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(0deg 0% 0% / 0.25);
-  will-change: transform;
-  transform: translateY(2px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-.button-edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: linear-gradient(
-    to left,
-    hsl(340deg 100% 16%) 0%,
-    hsl(340deg 100% 32%) 8%,
-    hsl(340deg 100% 32%) 92%,
-    hsl(340deg 100% 16%) 100%
-  );
-}
-
-.button-front {
-  display: block;
-  position: relative;
-  padding: 12px 27px;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  color: white;
-  background: hsl(345deg 100% 47%);
-  will-change: transform;
-  transform: translateY(-4px);
-  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-}
-
-@media (min-width: 768px) {
-  .button-front {
-    font-size: 1.25rem;
-    padding: 12px 42px;
-  }
-}
-
-.button-pushable:hover {
-  filter: brightness(110%);
-  -webkit-filter: brightness(110%);
-}
-
-.button-pushable:hover .button-front {
-  transform: translateY(-6px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.button-pushable:active .button-front {
-  transform: translateY(-2px);
-  transition: transform 34ms;
-}
-
-.button-pushable:hover .button-shadow {
-  transform: translateY(4px);
-  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-}
-
-.button-pushable:active .button-shadow {
-  transform: translateY(1px);
-  transition: transform 34ms;
-}
-
-.button-pushable:focus:not(:focus-visible) {
-  outline: none;
+  touch-action: manipulation; */
+  width: 80%;
+  background-color: rgba(245, 245, 245, 0.3);
+  border: 4px solid transparent;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #bdffff;
+  height: 50px;
+  font-size: 24px;
 }
 
 .profile {
-  width: 150px;
-  height: 150px;
-  border: 2px solid red;
+  width: 110px;
+  height: 110px;
+  border: 2px solid;
+  border-color: #72ffff;
   border-radius: 50%;
   backdrop-filter: blur(10px) saturate(70%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.socials {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .socials,
+  .button-pushable {
+    width: 480px;
+  }
 }

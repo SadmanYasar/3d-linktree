@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script>
       window.addEventListener('DOMContentLoaded', () => {
-        VANTA.CLOUDS2({
+        VANTA.NET({
           el: '#background',
           mouseControls: true,
           touchControls: true,
@@ -18,8 +18,17 @@
           minHeight: 200.0,
           minWidth: 200.0,
           scale: 1.0,
-          texturePath: './gallery/noise.png',
+          scaleMobile: 1.0,
+          color: 0x3fffff,
+          backgroundColor: 0x151b3c,
+          maxDistance: 10.0,
         });
+
+        setTimeout(() => {
+          const main = document.querySelector('main');
+          main.style.opacity = 1;
+          main.style.filter = 'blur(0px)';
+        }, 1000);
       });
     </script>
   </head>
@@ -37,25 +46,40 @@
         </div>
 
         <div class="link">
-          <button class="button-pushable" role="button">
-            <span class="button-shadow"></span>
-            <span class="button-edge"></span>
-            <span class="button-front text"> Facebook </span>
+          <button
+            class="button-pushable"
+            role="button"
+            onclick="window.open('https://www.fiverr.com/share/eoeWd3','_blank')"
+          >
+            <span class="button-front text"> Get a 3D link in bio </span>
           </button>
         </div>
         <div class="link">
-          <button class="button-pushable" role="button">
-            <span class="button-shadow"></span>
-            <span class="button-edge"></span>
-            <span class="button-front text"> Instagram </span>
+          <button
+            class="button-pushable"
+            role="button"
+            onclick="window.open('https://sadmanyasarsayem.netlify.app/','_blank')"
+          >
+            <span class="button-front text"> Portfolio </span>
           </button>
         </div>
         <div class="link">
-          <button class="button-pushable" role="button">
-            <span class="button-shadow"></span>
-            <span class="button-edge"></span>
-            <span class="button-front text"> Twitter </span>
+          <button
+            class="button-pushable"
+            role="button"
+            onclick="window.open('https://sadman-yasar-sayem-blogs.vercel.app/','_blank')"
+          >
+            <span class="button-front text"> Read my blogs </span>
           </button>
+        </div>
+        <div class="socials">
+          <div class="insta">
+            <img src="/insta.svg" alt="insta-image" />
+          </div>
+          <div class="facebook">b</div>
+          <div class="github">c</div>
+          <div class="linkedin">d</div>
+          <div class="behance">e</div>
         </div>
       </div>
       <div id="background"></div>
