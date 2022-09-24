@@ -1,88 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        VANTA.NET({
-          el: '#background',
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x3fffff,
-          backgroundColor: 0x151b3c,
-          maxDistance: 10.0,
-        });
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="styles.css" />
 
-        setTimeout(() => {
-          const main = document.querySelector('main');
-          main.style.opacity = 1;
-          main.style.filter = 'blur(0px)';
-        }, 1000);
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      /* VANTA.NET({
+        el: '#background',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3fffff,
+        backgroundColor: 0x151b3c,
+        maxDistance: 10.0,
+      }); */
+      VANTA.BIRDS({
+        el: '#background',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        birdSize: 1,
+        wingSpan: 40.0,
+        speedLimit: 3.0,
+        separation: 100.0,
+        quantity: 2.0,
+        alignment: 77.0,
+        cohesion: 5.0,
+        backgroundAlpha: 0.0,
       });
-    </script>
-  </head>
-  <body>
-    <main>
-      <div class="links">
-        <div class="link">
-          <img
-            class="profile"
-            src="https://avatars.githubusercontent.com/u/67522140?v=4"
-          />
-        </div>
-        <div class="name">
-          <h1>@sadmanyasar_</h1>
-        </div>
+    });
+  </script>
+</head>
 
-        <div class="link">
-          <button
-            class="button-pushable"
-            role="button"
-            onclick="window.open('https://www.fiverr.com/share/eoeWd3','_blank')"
-          >
-            <span class="button-front text"> Get a 3D link in bio </span>
-          </button>
+<body>
+  <main>
+    <div class="links">
+      <div class="link">
+        <img class="profile" src="https://avatars.githubusercontent.com/u/67522140?v=4" />
+      </div>
+      <div class="name">
+        <h1>@sadmanyasar_</h1>
+      </div>
+
+      <div class="link">
+        <button class="button-pushable" role="button"
+          onclick="window.open('https://www.fiverr.com/share/eoeWd3','_blank')">
+          <span class="button-front text"> Get a 3D link in bio </span>
+        </button>
+      </div>
+      <div class="link">
+        <button class="button-pushable" role="button"
+          onclick="window.open('https://sadmanyasarsayem.netlify.app/','_blank')">
+          <span class="button-front text"> Portfolio </span>
+        </button>
+      </div>
+      <div class="link">
+        <button class="button-pushable" role="button"
+          onclick="window.open('https://sadman-yasar-sayem-blogs.vercel.app/','_blank')">
+          <span class="button-front text"> Read my blogs </span>
+        </button>
+      </div>
+      <div class="socials">
+        <span class="insta">
+          <img src="/insta.svg" class="icon" alt="instagram-icon"
+            onclick="window.open('https://www.instagram.com/sadmanyasar_/','_blank')" />
+        </span>
+        <div class="facebook">
+          <img src="/facebook.svg" class="icon" alt="facebook-icon"
+            onclick="window.open('https://www.facebook.com/SadmanYasarSayem/','_blank')" />
         </div>
-        <div class="link">
-          <button
-            class="button-pushable"
-            role="button"
-            onclick="window.open('https://sadmanyasarsayem.netlify.app/','_blank')"
-          >
-            <span class="button-front text"> Portfolio </span>
-          </button>
+        <div class="github">
+          <img src="/git.svg" class="icon" alt="github-icon"
+            onclick="window.open('https://github.com/SadmanYasar','_blank')" />
         </div>
-        <div class="link">
-          <button
-            class="button-pushable"
-            role="button"
-            onclick="window.open('https://sadman-yasar-sayem-blogs.vercel.app/','_blank')"
-          >
-            <span class="button-front text"> Read my blogs </span>
-          </button>
+        <div class="linkedin">
+          <img src="/linkedin.svg" class="icon" alt="linkedin-icon"
+            onclick="window.open('https://www.linkedin.com/in/Sadman-Yasar-Sayem/','_blank')" />
         </div>
-        <div class="socials">
-          <div class="insta">
-            <img src="/insta.svg" alt="insta-image" />
-          </div>
-          <div class="facebook">b</div>
-          <div class="github">c</div>
-          <div class="linkedin">d</div>
-          <div class="behance">e</div>
+        <div class="behance">
+          <img src="/behance.svg" class="icon" alt="behance-icon"
+            onclick="window.open('https://www.behance.net/sadmanyasar','_blank')" />
         </div>
       </div>
-      <div id="background"></div>
-    </main>
-  </body>
+    </div>
+    <div id="background"></div>
+  </main>
+</body>
+
 </html>
