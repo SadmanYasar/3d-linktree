@@ -24,7 +24,7 @@ body {
   color: black;
   background-color: white;
   background-image:linear-gradient(rgba(0, 0, 0, 0.2),
-  rgba(0, 0, 0, 0.2)), url('beach-top.jpg');
+  rgba(0, 0, 0, 0.2)), url('images/background/beach-top.jpg');
   /* repeat center center fixed;
   background-size: cover; */
 
