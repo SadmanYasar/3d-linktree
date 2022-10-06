@@ -22,9 +22,9 @@ body {
   padding: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
+  background-color: dodgerblue;
   background-image:linear-gradient(rgba(0, 0, 0, 0.2),
-  rgba(0, 0, 0, 0.2)), url('images/background/beach-top.jpg');
+  rgba(0, 0, 0, 0.2)), url('images/background/beach-top.webp');
   /* repeat center center fixed;
   background-size: cover; */
 
@@ -100,7 +100,6 @@ h1 {
   border: 2px solid;
   border-color: var(--profile-border);
   border-radius: 50%;
-  backdrop-filter: blur(10px) saturate(70%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
