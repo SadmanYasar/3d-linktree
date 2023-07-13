@@ -105,10 +105,7 @@ h1 {
 }
 
 .button-pushable:hover .button-front {
-  color: transparent;
-  background: url('images/background/beach-top.webp') no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
 }
 
 .profile {
